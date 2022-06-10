@@ -1,4 +1,5 @@
 
+// code to simulate charge and discharge ( SOC will be considered as 41% irrespective of the open circuit voltage and the charge and discharge current will be 100 time multiplied)
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #include "DHT.h"
