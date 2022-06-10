@@ -16,8 +16,8 @@ LiquidCrystal_I2C lcd(0x27,20,4);
 // (on/off relay, VOC)"relay1" 2
 // (charging relay) "relay2" 5
 // temperature sensor "DHTPIN" 3
-
 //Current sensor variables
+
 const int currentPin = A0;
 int sensitivity = 100;
 int adcValue= 0;
@@ -311,6 +311,7 @@ void loop() {
             discharge_start_millis = discharge_current_millis;
             if(soc > 90){
               charge_state = "discharging";
+              totalCoulumbs = 0;
               digitalWrite(relay2,LOW);
               charge_current_millis = millis();
               charge_start_millis = 0;
