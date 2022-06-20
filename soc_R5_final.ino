@@ -132,6 +132,9 @@ float open_circuit_voltage(){
   else if((mocv <= 3.090) && (mocv >= 3.00)){
     soc = 2;
   }
+  else if((mocv <= 2.29) && (mocv >= 1)){
+    soc = 0;
+  }
   else{
     soc = 0.0001;
     Serial.print("failed to get SOC");
