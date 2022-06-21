@@ -182,7 +182,7 @@ void loop() {
     discharge_current_millis = millis();
     charge_state = "discharging";
   }
-  else if(charge_state == "start_dcharge"){
+  else if(charge_state == "start_charge"){
     charge_current_millis = millis();
     charge_state = "charging";
   }
